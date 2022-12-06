@@ -33,6 +33,7 @@ html, body {
 			req.open('GET', 'Hearings Elearning.mp4', true);
 			req.onload = function () {
 				var blob_uri = URL.createObjectURL(this.response);
+				console.log(blob_uri);
 				
 				TSC.playerConfiguration.addMediaSrc(blob_uri);
 				TSC.playerConfiguration.setXMPSrc("Hearings Elearning_config.xml");
