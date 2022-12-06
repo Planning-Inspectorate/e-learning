@@ -21,7 +21,7 @@ window.onload = function() {
     var elem = document.getElementById("tscVideoContent");
     var req = new XMLHttpRequest();
 	req.responseType = "blob";
-    req.open('GET', 'Hearings Elearning.mp4', false);
+    req.open('GET', 'Hearings Elearning.mp4', true);
     req.onload = function () {
         var blob_uri = URL.createObjectURL(this.response);
         elem.appendChild(document.createElement("source"))
