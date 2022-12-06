@@ -55,7 +55,7 @@ MTenmAA65ZVCUbsnbZyO5szk7y2Rr6PrNbz94g==" tscIQ:requireUserId="1" tscIQ:locale="
             <rdf:Description>
                <tscDM:files>
                   <rdf:Seq>
-                     <rdf:li xmpDM:name="0" xmpDM:value="Hearings Elearning.mp4"/><rdf:li xmpDM:name="1" xmpDM:value="Hearings_Elearning_First_Frame.png"/><rdf:li xmpDM:name="2" xmpDM:value="Hearings_Elearning_Thumbnails.png"/></rdf:Seq>
+                     <rdf:li xmpDM:name="0" xmpDM:value="https://github.com/Planning-Inspectorate/e-learning/raw/main/Hearings%20Elearning.mp4"/><rdf:li xmpDM:name="1" xmpDM:value="Hearings_Elearning_First_Frame.png"/><rdf:li xmpDM:name="2" xmpDM:value="Hearings_Elearning_Thumbnails.png"/></rdf:Seq>
                </tscDM:files>
             </rdf:Description>
          </tscDM:contentList>
