@@ -15,7 +15,6 @@ html, body {
 	background-color: #1a1a1a;
 }
 </style>
-
 </head>
 <body>
 
@@ -28,38 +27,28 @@ html, body {
 <script type="text/javascript">
     (function (window) {
         function setup(TSC) {
-			var req = new XMLHttpRequest();
-			req.responseType = "blob";
-			req.open('GET', 'Hearings Elearning.mp4', true);
-			req.onload = function () {
-				var blob_uri = URL.createObjectURL(this.response);
-				console.log(blob_uri);
-				console.log(blob_uri.blob);
+             TSC.playerConfiguration.addMediaSrc("Hearings Elearning.mp4");
+             TSC.playerConfiguration.setXMPSrc("Hearings Elearning_config.xml");
+             TSC.playerConfiguration.setAutoHideControls(true);
+             TSC.playerConfiguration.setBackgroundColor("#000000");
+             TSC.playerConfiguration.setCaptionsEnabled(false);
+             TSC.playerConfiguration.setSidebarEnabled(false);
+             TSC.playerConfiguration.setTheme(TSC.themeNames.DUSK);
+             TSC.playerConfiguration.allowFastForward = true;
+             TSC.playerConfiguration.skipVideoControlsEnabled = true;
+             TSC.playerConfiguration.skipVideoDuration = 10;
+             
+             TSC.playerConfiguration.setAutoPlayMedia(false);
+             TSC.playerConfiguration.setPosterImageSrc("Hearings_Elearning_First_Frame.png");
+             TSC.playerConfiguration.setIsSearchable(true);
+             TSC.playerConfiguration.setEndActionType("stop");
+             TSC.playerConfiguration.setEndActionParam("true");
+             TSC.playerConfiguration.setAllowRewind(-1);
+             
 
-				TSC.playerConfiguration.addMediaSrc(blob_uri.blob);
-				TSC.playerConfiguration.setXMPSrc("Hearings Elearning_config.xml");
-				TSC.playerConfiguration.setAutoHideControls(true);
-				TSC.playerConfiguration.setBackgroundColor("#000000");
-				TSC.playerConfiguration.setCaptionsEnabled(false);
-				TSC.playerConfiguration.setSidebarEnabled(false);
-				TSC.playerConfiguration.setTheme(TSC.themeNames.DUSK);
-				TSC.playerConfiguration.allowFastForward = true;
-				TSC.playerConfiguration.skipVideoControlsEnabled = true;
-				TSC.playerConfiguration.skipVideoDuration = 10;
-				 
-				TSC.playerConfiguration.setAutoPlayMedia(false);
-				TSC.playerConfiguration.setPosterImageSrc("Hearings_Elearning_First_Frame.png");
-				TSC.playerConfiguration.setIsSearchable(true);
-				TSC.playerConfiguration.setEndActionType("stop");
-				TSC.playerConfiguration.setEndActionParam("true");
-				TSC.playerConfiguration.setAllowRewind(-1);
-				 
-				TSC.localizationStrings.setLanguage(TSC.languageCodes.ENGLISH);
+             TSC.localizationStrings.setLanguage(TSC.languageCodes.ENGLISH);
 
-				TSC.mediaPlayer.init("#tscVideoContent");
-			};
-			
-			req.send(null);
+            TSC.mediaPlayer.init("#tscVideoContent");
         }
 
         function loadScript(e,t){if(!e||!(typeof e==="string")){return}var n=document.createElement("script");if(typeof document.attachEvent==="object"){n.onreadystatechange=function(){if(n.readyState==="complete"||n.readyState==="loaded"){if(t){t()}}}}else{n.onload=function(){if(t){t()}}}n.src=e;document.getElementsByTagName("head")[0].appendChild(n)}
